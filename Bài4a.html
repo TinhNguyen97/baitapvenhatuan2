@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 4a</title>
+</head>
+<body>
+<input id="a" placeholder="Nhập cạnh a" type="number" value="">
+<button onclick="tinhtoan()" type="button" value="">Tính</button>
+<p id="chuvi"></p>
+<p id="dientich"></p>
+<script>
+    function tinhtoan() {
+        let a = parseFloat(document.getElementById('a').value)
+        document.getElementById('chuvi').innerHTML='Chu vi hình vuông là:'+(a*4)
+        document.getElementById('dientich').innerHTML='Diện hình vuông là:'+(a*a)
+    }
+
+</script>
+</body>
+</html>

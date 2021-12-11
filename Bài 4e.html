@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 4ei</title>
+</head>
+<body>
+<input id='a' type="number" value="" placeholder="Nhập cạnh a">
+<input id='b' type="number" value="" placeholder="Nhập cạnh b">
+<input id='c' type="number" value="" placeholder="Nhập cạnh c">
+<button onclick="kiemtratamgiac()">Kiểm tra</button>
+<p id='ketqua'></p>
+<script>
+    function kiemtratamgiac() {
+        let a = parseFloat(document.getElementById('a').value)
+        let b = parseFloat(document.getElementById('b').value)
+        let c = parseFloat(document.getElementById('c').value)
+        if (((a + b) <= c) || ((a + c) <= b) || ((b + c) <= a))
+            document.getElementById('ketqua').innerHTML = 'a,b,c không phải là 3 cạnh của tam giác'
+        else if (a == b && b == c)
+            document.getElementById('ketqua').innerHTML = 'a,b,c tạo thành tam giác đều'
+        else if ((a == b) || (b == c) || (c == a))
+            document.getElementById('ketqua').innerHTML = 'a,b,c tạo thành tam giác cân'
+        else if ((a * a + b * b) == c * c || (b * b + c * c) == a * a || (a * a + c * c) == b * b)
+            document.getElementById('ketqua').innerHTML = 'a,b,c tạo thành tam giác vuông'
+        else
+            document.getElementById('ketqua').innerHTML = 'a,b,c tạo thành tam giác thường'
+    }
+</script>
+
+</body>
+</html>

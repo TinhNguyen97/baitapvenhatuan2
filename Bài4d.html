@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài4d</title>
+</head>
+<body>
+<input id='nam' type="number" value="" placeholder="Nhập năm">
+<button onclick="tinhTheky()" type="button" value="">Tính thế kỷ</button>
+<br>
+<p id='ketqua'></p>
+<script>
+    function tinhTheky() {
+        let nam = parseInt(document.getElementById('nam').value)
+        let theky=parseInt(nam/100)+1
+        document.getElementById('ketqua').innerHTML='Thế kỷ:'+theky
+    }
+</script>
+</body>
+</html>
